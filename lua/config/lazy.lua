@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         -- add LazyVim and import its plugins
-        { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+        { import = "plugins" },
         {
             "rose-pine/neovim",
             as = "rose-pine",
@@ -26,8 +26,24 @@ require("lazy").setup({
                 vim.cmd('colorscheme rose-pine')
             end,
         },
+
+        {
+            'nvim-lualine/lualine.nvim',
+            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        },
+        -- {
+        --     "windwp/nvim-autopairs",
+        --     config = function() require("nvim-autopairs").setup {} end
+        -- },
+        -- { 'nvim-treesitter/playground' },
+        -- { "ThePrimeagen/harpoon",       branch = "harpoon2",                             requires = { { "nvim-lua/plenary.nvim" } } },
+        -- { 'mbbill/undotree' },
+        -- { 'theprimeagen/vim-be-good' },
+        -- { 'tpope/vim-fugitive' },
+        -- { 'folke/neodev.nvim' },
+        -- { 'nvim-tree/nvim-web-devicons' },
+        -- { "echasnovski/mini.nvim",      requires = { { 'nvim-tree/nvim-web-devicons' } } },
         -- import/override with your plugins
-        { import = "plugins" },
     },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -38,21 +54,5 @@ require("lazy").setup({
         version = false, -- always use the latest git commit
         -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
-    install = { colorscheme = { "rose-pine" } },
     checker = { enabled = true }, -- automatically check for plugin updates
-    performance = {
-        rtp = {
-            -- disable some rtp plugins
-            disabled_plugins = {
-                "gzip",
-                -- "matchit",
-                -- "matchparen",
-                -- "netrwPlugin",
-                "tarPlugin",
-                "tohtml",
-                "tutor",
-                "zipPlugin",
-            },
-        },
-    },
 })
