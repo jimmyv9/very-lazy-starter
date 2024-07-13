@@ -18,19 +18,6 @@ require("lazy").setup({
     spec = {
         -- add LazyVim and import its plugins
         { import = "plugins" },
-        {
-            "rose-pine/neovim",
-            as = "rose-pine",
-            config = function()
-                require("rose-pine").setup()
-                vim.cmd('colorscheme rose-pine')
-            end,
-        },
-
-        {
-            'nvim-lualine/lualine.nvim',
-            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-        },
         -- {
         --     "windwp/nvim-autopairs",
         --     config = function() require("nvim-autopairs").setup {} end
