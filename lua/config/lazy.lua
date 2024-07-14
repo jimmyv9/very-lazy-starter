@@ -18,19 +18,6 @@ require("lazy").setup({
     spec = {
         -- add LazyVim and import its plugins
         { import = "plugins" },
-        -- {
-        --     "windwp/nvim-autopairs",
-        --     config = function() require("nvim-autopairs").setup {} end
-        -- },
-        -- { 'nvim-treesitter/playground' },
-        -- { "ThePrimeagen/harpoon",       branch = "harpoon2",                             requires = { { "nvim-lua/plenary.nvim" } } },
-        -- { 'mbbill/undotree' },
-        -- { 'theprimeagen/vim-be-good' },
-        -- { 'tpope/vim-fugitive' },
-        -- { 'folke/neodev.nvim' },
-        -- { 'nvim-tree/nvim-web-devicons' },
-        -- { "echasnovski/mini.nvim",      requires = { { 'nvim-tree/nvim-web-devicons' } } },
-        -- import/override with your plugins
     },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
