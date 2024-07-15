@@ -40,6 +40,11 @@ keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
 
 -- Toggle file explorer
 keymap("n", "<leader>e", "<cmd>lua require('mini.files').open()<CR>", opts)
+-- Basic split navigation
+keymap("n", "<leader>h", "<C-w>h", opts)
+keymap("n", "<leader>j", "<C-w>j", opts)
+keymap("n", "<leader>k", "<C-w>k", opts)
+keymap("n", "<leader>l", "<C-w>l", opts)
 
 -- Toggle wrap text
 keymap("n", "<leader>wt", ":set wrap!<CR>", opts)
