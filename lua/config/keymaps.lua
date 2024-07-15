@@ -21,16 +21,11 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
+
 -- Yank to system clipboard
 keymap("n", "<leader>y", "\"+y", opts)
 keymap("v", "<leader>y", "\"+y", opts)
 keymap("n", "<leader>Y", "\"+Y", opts)
-
--- Disable q
-keymap("n", "q", "<nop>", opts)
-
--- Open a new tmux window and run tmux-sessionizer
-keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", opts)
 
 -- Format buffer with LSP
 keymap("n", "<leader>f", function()
@@ -59,4 +54,3 @@ keymap("n", "<leader>nn", function()
         vim.wo.relativenumber = true
     end
 end, opts)
-
